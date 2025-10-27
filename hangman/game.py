@@ -22,6 +22,6 @@ def is_lost(state: dict) -> bool:
         return True
     return False
 def render_display(state: dict) -> str:
-    pass
+    return "".join(state["display"])
 def render_summary(state: dict) -> str:
     return f'The secret word is {state['secret']}, the guesses word is {state['guessed']}'
