@@ -6,4 +6,5 @@ def prompt_guess() -> str:
 def print_status(state: dict) -> None:
     print(f'{state["display"]}\n word you guess {state['guessed']} \n guess you have {(state['max_tries']- state['wrong_guesses'])}')
 def print_result(state: dict) -> None:
-    pass
+    if state["wrong_guesses"] >= state["max_tries"]:
+        print(f'Wall done!!! \n the word is {state['secret']}, word you guesses {state['guessed']}')
